@@ -1,0 +1,10 @@
+<!-- res/values/styles.xml -->
+<resources>
+    <!-- Base application theme -->
+    <style name="Theme.FruitVegRecognition" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here -->
+        <item name="colorPrimary">#5c9cf2</item>
+        <item name="colorPrimaryDark">#5c9cf2</item>
+        <item name="colorAccent">#5c9cf2</item>
+    </style>
+</resources>

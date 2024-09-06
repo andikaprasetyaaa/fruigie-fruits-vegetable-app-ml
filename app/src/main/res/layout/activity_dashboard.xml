@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardAct">
+
+    <!-- SearchView -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="177dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/search_view_bg"
+        android:queryHint="Search here..."
+        app:iconifiedByDefault="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Camera Button -->
+    <ImageButton
+        android:id="@+id/cameraButton"
+        android:layout_width="56dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="116dp"
+        android:background="@drawable/button_design"
+        android:src="@drawable/camera_svgrepo_com"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Upload Button -->
+    <ImageButton
+        android:id="@+id/uploadButton"
+        android:layout_width="56dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="56dp"
+        android:background="@drawable/button_design"
+        android:src="@drawable/upload_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- ImageView with Rounded Corners -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="288dp"
+        android:layout_height="279dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_image_bg"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchView" />
+
+    <!-- TableLayout aligned with ImageView -->
+    <TableLayout
+        android:id="@+id/nutritionTable"
+        android:layout_width="288dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/table_border"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:stretchColumns="1">
+
+        <TableRow
+            android:background="@drawable/table_row_border">
+            <TextView
+                android:id="@+id/nutritionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nutrition Summary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/roboto_regular"/>
+        </TableRow>
+
+        <TableRow
+            android:background="@drawable/table_row_border">
+            <TextView
+                android:id="@+id/nameLabel"
+                android:text="Name"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:fontFamily="@font/roboto_regular"/>
+            <TextView
+                android:id="@+id/nameValue"
+                android:text="Apple"
+                android:padding="8dp"
+                android:textColor="#000000"
+                android:fontFamily="@font/roboto_regular"/>
+        </TableRow>
+
+        <TableRow
+            android:background="@drawable/table_row_border">
+            <TextView
+                android:id="@+id/caloriesLabel"
+                android:text="Calories"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:fontFamily="@font/roboto_regular"/>
+            <TextView
+                android:id="@+id/caloriesValue"
+                android:text="95"
+                android:padding="8dp"
+                android:textColor="#000000"
+                android:fontFamily="@font/roboto_regular"/>
+        </TableRow>
+
+        <TableRow
+            android:background="@drawable/table_row_border">
+            <TextView
+                android:id="@+id/fatLabel"
+                android:text="Fat"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:fontFamily="@font/roboto_regular"/>
+            <TextView
+                android:id="@+id/fatValue"
+                android:text="0.3g"
+                android:padding="8dp"
+                android:textColor="#000000"
+                android:fontFamily="@font/roboto_regular"/>
+        </TableRow>
+
+        <TableRow
+            android:background="@drawable/table_row_border">
+            <TextView
+                android:id="@+id/carbsLabel"
+                android:text="Carbohydrates"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:fontFamily="@font/roboto_regular"/>
+            <TextView
+                android:id="@+id/carbsValue"
+                android:text="25g"
+                android:padding="8dp"
+                android:textColor="#000000"
+                android:fontFamily="@font/roboto_regular"/>
+        </TableRow>
+
+        <TableRow
+            android:background="@drawable/table_row_border">
+            <TextView
+                android:id="@+id/proteinLabel"
+                android:text="Protein"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:fontFamily="@font/roboto_regular"/>
+            <TextView
+                android:id="@+id/proteinValue"
+                android:text="0.5g"
+                android:padding="8dp"
+                android:textColor="#000000"
+                android:fontFamily="@font/roboto_regular"/>
+        </TableRow>
+    </TableLayout>
+
+    <!-- Result TextView -->
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nutritionTable"
+        android:text="Result will be shown here"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
